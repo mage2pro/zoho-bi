@@ -34,7 +34,7 @@ final class Validator extends \Df\API\Response\Validator {
 	 * @used-by \Df\API\Response\Validator::validate()
 	 * @return string
 	 */
-	protected function rs() {return df_json_encode_pretty($this->r());}
+	protected function rs() {return df_json_encode($this->r());}
 
 	/**
 	 * 2017-07-06
@@ -43,7 +43,7 @@ final class Validator extends \Df\API\Response\Validator {
 	 * @used-by \Df\API\Response\Validator::validate()
 	 * @return string
 	 */
-	protected function title() {return 'Zoho ' . df_zoho_app($this->c()->m());}
+	protected function title() {return 'Zoho ' . df_zoho_app($this->c()->m())->title();}
 
 	/**
 	 * 2017-07-06
