@@ -37,4 +37,12 @@ abstract class Client extends \Df\Zoho\API\Client {
 	final protected function uriBase() {return sprintf(
 		"https://%s.zoho.com/api/v{$this->version()}", df_zoho_app_lc($this)
 	);}
+
+	/**
+	 * 2017-07-06
+	 * @see \Df\API\Client::responseValidatorC()
+	 * @used-by \Df\API\Client::p()
+	 * @return string
+	 */
+	final protected function responseValidatorC() {return \Df\ZohoBI\API\Validator::class;}
 }
