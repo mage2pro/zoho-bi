@@ -9,6 +9,15 @@ use Df\ZohoBI\API\Client as C;
  */
 abstract class Facade {
 	/**
+	 * 2017-07-07
+	 * [Zoho Books] How to get the list of enabled currencies by API? https://mage2.pro/t/4144
+	 * https://www.zoho.eu/books/api/v3/#Currency_List_Currencies
+	 * https://www.zoho.eu/inventory/api/v1/#Currency_List_Currency
+	 * @return array(array(string => mixed))
+	 */
+	final function currencies() {return $this->p(__FUNCTION__, 'settings');}
+
+	/**
 	 * 2017-07-06
 	 * 2017-07-07
 	 * «In Zoho Books / Zoho Inventory, your business is termed as an organization.
@@ -27,12 +36,15 @@ abstract class Facade {
 	/**
 	 * 2017-07-06
 	 * @param string $path
+	 * @param string $ns [optional]
 	 * @param array(string => mixed) $p [optional]
 	 * @param string|null $method [optional]
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	final function p($path, array $p = [], $method = null) {return C::i($this, $path, $p, $method)->p()[$path];}
+	final function p($path, $ns = '', array $p = [], $method = null) {return
+		C::i($this, df_cc_path($ns, $path), $p, $method)->p()[$path]
+	;}
 
 	/**
 	 * 2017-07-07
