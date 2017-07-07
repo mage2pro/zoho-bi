@@ -12,7 +12,7 @@ abstract class Facade {
 	 * 2017-07-06
 	 * @return array(array(string => mixed))
 	 */
-	final static function organizations() {return self::p(__FUNCTION__);}
+	final function organizations() {return $this->p(__FUNCTION__);}
 
 	/**
 	 * 2017-07-06
@@ -22,7 +22,13 @@ abstract class Facade {
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	final static function p($path, array $p = [], $method = null) {return C::i(
-		static::class, $path, $p, $method
-	)->p()[$path];}
+	final function p($path, array $p = [], $method = null) {return C::i($this, $path, $p, $method)->p()[$path];}
+
+	/**
+	 * 2017-07-07
+	 * @used-by \Df\ZohoBI\App::f()
+	 * @param string|object $c
+	 * @return self
+	 */
+	final static function s($c) {return dfcf(function($c) {return df_new(df_con_heir($c, __CLASS__));}, [$c]);}
 }
