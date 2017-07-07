@@ -2,6 +2,8 @@
 namespace Df\ZohoBI\API;
 use Df\Core\Exception as DFE;
 use Df\ZohoBI\API\Client as C;
+use Df\ZohoBI\App;
+use \Df\ZohoBI\Settings;
 /**
  * 2017-07-06
  * @see \Dfe\ZohoBooks\API\Facade
@@ -31,7 +33,7 @@ abstract class Facade {
 	 * https://www.zoho.eu/inventory/api/v1/#organization-id
 	 * @return array(array(string => mixed))
 	 */
-	final function organizations() {return $this->p(__FUNCTION__);}
+	final function organizations() {return $this->p(self::$ORG);}
 
 	/**
 	 * 2017-07-06
@@ -43,8 +45,24 @@ abstract class Facade {
 	 * @throws DFE
 	 */
 	final function p($path, $ns = '', array $p = [], $method = null) {return
-		C::i($this, df_cc_path($ns, $path), $p, $method)->p()[$path]
+		C::i($this
+			,df_cc_path($ns, $path)
+			,$p + (self::$ORG === $path ? [] : ['organization_id' => $this->ss()->organization()])
+			,$method
+		)->p()[$path]
 	;}
+
+	/**
+	 * 2017-07-07
+	 * @return App
+	 */
+	private function app() {return App::s($this);}
+
+	/**
+	 * 2017-07-07
+	 * @return Settings
+	 */
+	private function ss() {return $this->app()->ss();}
 
 	/**
 	 * 2017-07-07
@@ -53,4 +71,10 @@ abstract class Facade {
 	 * @return self
 	 */
 	final static function s($c) {return dfcf(function($c) {return df_new(df_con_heir($c, __CLASS__));}, [$c]);}
+
+	/**
+	 * 2017-07-07
+	 * @var string
+	 */
+	private static $ORG = 'organizations';
 }

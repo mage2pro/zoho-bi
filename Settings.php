@@ -19,6 +19,7 @@ abstract class Settings extends \Df\Zoho\Settings {
 	 * https://www.zoho.eu/books/api/v3/#organization-id
 	 * https://www.zoho.eu/inventory/api/v1/#organization-id
 	 * Note 2: The result is a natural number like «2723074» or «649147519».
+	 * @used-by \Df\ZohoBI\API\Facade::p()
 	 * @return int
 	 */
 	final function organization() {return intval($this->v());}
