@@ -1,7 +1,20 @@
 <?php
 namespace Df\ZohoBI\Source;
 use Df\ZohoBI\App;
-// 2017-07-06
+/**
+ * 2017-07-06
+ * 2017-07-07
+ * «In Zoho Books / Zoho Inventory, your business is termed as an organization.
+ * If you have multiple businesses, you simply set each of those up as an individual organization.
+ * Each organization is an independent Zoho Books / Zoho Inventory Organization
+ * with it’s own organization ID, base currency, time zone, language, contacts, reports, etc.
+ * The parameter `organization_id` along with the organization ID
+ * should be sent in with every API request to identify the organization.
+ * The `organization_id` can be obtained from the `GET /organizations` API’s JSON response.»
+ * https://www.zoho.eu/books/api/v3/#organization-id
+ * https://www.zoho.eu/inventory/api/v1/#organization-id
+ * @return array(array(string => mixed))
+ */
 final class Organization extends \Df\Config\Source\API {
 	/**
 	 * 2017-07-07
