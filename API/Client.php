@@ -19,16 +19,6 @@ abstract class Client extends \Df\Zoho\API\Client {
 	abstract protected function version();
 
 	/**
-	 * 2017-07-06
-	 * @override
-	 * @see \Df\Zoho\API\Client::_construct()
-	 * @used-by \Df\API\Client::__construct()
-	 */
-	final protected function _construct() {
-		parent::_construct();
-	}
-
-	/**
 	 * 2017-07-05
 	 * @override
 	 * @see \Df\API\Client::headers()

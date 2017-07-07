@@ -24,5 +24,5 @@ abstract class Facade {
 	 */
 	final static function p($path, array $p = [], $method = null) {return C::i(
 		static::class, $path, $p, $method
-	)->p();}
+	)->p()[$path];}
 }
