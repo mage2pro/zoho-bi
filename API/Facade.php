@@ -33,7 +33,7 @@ abstract class Facade {
 	 * https://www.zoho.eu/inventory/api/v1/#organization-id
 	 * @return array(array(string => mixed))
 	 */
-	final function organizations() {return $this->p(self::$ORG);}
+	final function organizations() {return $this->p(Client::ORG);}
 
 	/**
 	 * 2017-07-06
@@ -44,13 +44,9 @@ abstract class Facade {
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	final function p($path, $ns = '', array $p = [], $method = null) {return
-		C::i($this
-			,df_cc_path($ns, $path)
-			,$p + (self::$ORG === $path ? [] : ['organization_id' => $this->ss()->organization()])
-			,$method
-		)->p()[$path]
-	;}
+	final function p($path, $ns = '', array $p = [], $method = null) {return C::i(
+		$this, df_cc_path($ns, $path), $p, $method
+	)->p()[$path];}
 
 	/**
 	 * 2017-07-07
@@ -71,10 +67,4 @@ abstract class Facade {
 	 * @return self
 	 */
 	final static function s($c) {return dfcf(function($c) {return df_new(df_con_heir($c, __CLASS__));}, [$c]);}
-
-	/**
-	 * 2017-07-07
-	 * @var string
-	 */
-	private static $ORG = 'organizations';
 }
