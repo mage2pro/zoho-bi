@@ -21,29 +21,20 @@ final class Validator extends \Df\API\Response\Validator {
 	/**
 	 * 2017-07-06
 	 * @override
-	 * @see \Df\API\Response\Validator::message()
-	 * @used-by \Df\API\Response\Validator::validate()
+	 * @see \Df\API\Exception::long()
+	 * @used-by \Df\API\Client::p()
 	 * @return string
 	 */
-	protected function message() {return $this->r()['message'];}
+	function long() {return df_json_encode($this->r());}
 
 	/**
 	 * 2017-07-06
 	 * @override
-	 * @see \Df\API\Response\Validator::rs()
-	 * @used-by \Df\API\Response\Validator::validate()
+	 * @see \Df\API\Exception::short()
+	 * @used-by \Df\API\Client::p()
 	 * @return string
 	 */
-	protected function rs() {return df_json_encode($this->r());}
-
-	/**
-	 * 2017-07-06
-	 * @override
-	 * @see \Df\API\Response\Validator::title()
-	 * @used-by \Df\API\Response\Validator::validate()
-	 * @return string
-	 */
-	protected function title() {return 'Zoho ' . df_zoho_app($this->c()->m())->title();}
+	function short() {return $this->r()['message'];}
 
 	/**
 	 * 2017-07-06
@@ -52,5 +43,5 @@ final class Validator extends \Df\API\Response\Validator {
 	 * @used-by \Df\API\Response\Validator::validate()
 	 * @return bool
 	 */
-	protected function valid() {return 0 === $this->r()['code'];}
+	function valid() {return 0 === $this->r()['code'];}
 }
