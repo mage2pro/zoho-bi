@@ -47,7 +47,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @override
 	 * @see \Df\API\Client::uriBase()
 	 * @used-by \Df\API\Client::__construct()
-	 * @used-by \Df\API\Client::p()
+	 * @used-by \Df\API\Client::_p()
 	 * @return string
 	 */
 	final protected function uriBase() {return sprintf(
