@@ -22,5 +22,5 @@ abstract class Settings extends \Df\Zoho\Settings {
 	 * @used-by \Df\ZohoBI\API\Client::commonParams()
 	 * @return int
 	 */
-	final function organization() {return intval($this->v());}
+	final function organization() {return $this->i();}
 }
