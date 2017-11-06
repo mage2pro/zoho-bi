@@ -1,7 +1,7 @@
 {
 	"name": "mage2pro/zoho-bi"
 	,"version": "0.0.8"
-	,"description": "A common library for my «Zoho Books» and «Zoho Inventory» Magento 2 extensions."
+	,"description": "A common library for my «Zoho Books» and «Zoho Inventory» Magento 2 extensions"
 	,"type": "magento2-module"
 	,"homepage": "https://mage2.pro/tags/zoho"
 	,"license": "proprietary"
