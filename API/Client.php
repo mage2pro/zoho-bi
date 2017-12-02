@@ -13,7 +13,7 @@ use Df\ZohoBI\Settings;
 abstract class Client extends \Df\Zoho\API\Client {
 	/**
 	 * 2017-07-06
-	 * @used-by \Df\ZohoBI\API\Client::uriBase()
+	 * @used-by \Df\ZohoBI\API\Client::urlBase()
 	 * @see \Dfe\ZohoBooks\API\Client::version()
 	 * @see \Dfe\ZohoInventory\API\Client::version()
 	 * @return int
@@ -45,12 +45,12 @@ abstract class Client extends \Df\Zoho\API\Client {
 	/**
 	 * 2017-07-05
 	 * @override
-	 * @see \Df\API\Client::uriBase()
+	 * @see \Df\API\Client::urlBase()
 	 * @used-by \Df\API\Client::__construct()
 	 * @used-by \Df\API\Client::_p()
 	 * @return string
 	 */
-	final protected function uriBase() {return sprintf(
+	final protected function urlBase() {return sprintf(
 		"https://%s.zoho.com/api/v{$this->version()}", df_zoho_app($this)->titleLc()
 	);}
 
