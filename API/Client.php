@@ -37,7 +37,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @override
 	 * @see \Df\API\Client::headers()
 	 * @used-by \Df\API\Client::__construct()
-	 * @used-by \Df\API\Client::p()
+	 * @used-by \Df\API\Client::_p()
 	 * @return array(string => string)
 	 */
 	final protected function headers() {return ['Authorization' => "Zoho-authtoken {$this->ss()->token()}"];}
