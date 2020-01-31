@@ -1,5 +1,5 @@
 <?php
-namespace Df\ZohoBI\T;
+namespace Df\ZohoBI\Test;
 use Df\ZohoBI\App;
 use Df\ZohoBI\API\Facade;
 /**
@@ -7,7 +7,7 @@ use Df\ZohoBI\API\Facade;
  * @see \Dfe\ZohoBooks\T\TestCase
  * @see \Dfe\ZohoInventory\T\TestCase
  */
-abstract class TestCase extends \Df\Zoho\T\TestCase {
+abstract class TestCase extends \Df\Zoho\Test\TestCase {
 	/**
 	 * 2017-07-07
 	 * @return App
