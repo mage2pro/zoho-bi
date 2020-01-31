@@ -4,8 +4,8 @@ use Df\ZohoBI\App;
 use Df\ZohoBI\API\Facade;
 /**
  * 2017-07-07
- * @see \Dfe\ZohoBooks\T\TestCase
- * @see \Dfe\ZohoInventory\T\TestCase
+ * @see \Dfe\ZohoBooks\Test\TestCase
+ * @see \Dfe\ZohoInventory\Test\TestCase
  */
 abstract class TestCase extends \Df\Zoho\Test\TestCase {
 	/**
