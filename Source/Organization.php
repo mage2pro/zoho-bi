@@ -42,7 +42,7 @@ final class Organization extends \Df\Config\Source\API {
 	 * @return array(string => string)
 	 */
 	protected function fetch() {return df_map_r(function($v) {return [
-		$v['organization_id'], "{$v['name']} ({$v['organization_id']})"
+		$v['organization_id'], df_desc($v['name'], $v['organization_id'])
 	];}, $this->app()->f()->organizations());}
 
 	/**
