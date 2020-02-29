@@ -58,7 +58,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * 2017-07-06
 	 * @override
 	 * @see \Df\API\Client::responseValidatorC()
-	 * @used-by \Df\API\Client::p()
+	 * @used-by \Df\API\Client::_p()
 	 * @return string
 	 */
 	final protected function responseValidatorC() {return \Df\ZohoBI\API\Validator::class;}
