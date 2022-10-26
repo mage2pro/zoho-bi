@@ -41,7 +41,7 @@ final class Organization extends \Df\Config\Source\API {
 	 * @used-by \Df\Config\Source\API::map()
 	 * @return array(string => string)
 	 */
-	protected function fetch() {return df_map_r(function($v) {return [
+	protected function fetch():array {return df_map_r(function($v) {return [
 		$v['organization_id'], df_desc($v['name'], $v['organization_id'])
 	];}, $this->app()->f()->organizations());}
 
@@ -50,18 +50,16 @@ final class Organization extends \Df\Config\Source\API {
 	 * @override
 	 * @see \Df\Config\Source\API::isRequirementMet()
 	 * @used-by \Df\Config\Source\API::map()
-	 * @return bool
 	 */
-	protected function isRequirementMet() {return $this->ss()->token();}
+	protected function isRequirementMet():bool {return $this->ss()->token();}
 
 	/**
 	 * 2017-07-06
 	 * @override
 	 * @see \Df\Config\Source\API::requirement()
 	 * @used-by \Df\Config\Source\API::map()
-	 * @return string
 	 */
-	protected function requirement() {return 'Specify the «Authentication Token» first.';}
+	protected function requirement():string {return 'Specify the «Authentication Token» first.';}
 
 	/**
 	 * 2017-07-06

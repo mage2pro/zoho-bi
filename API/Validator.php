@@ -23,16 +23,14 @@ final class Validator extends \Df\API\Response\Validator {
 	 * @override
 	 * @see \Df\API\Exception::short()
 	 * @used-by \Df\API\Client::_p()
-	 * @return string
 	 */
-	function short() {return $this->r()['message'];}
+	function short():string {return $this->r()['message'];}
 
 	/**
 	 * 2017-07-06
 	 * @override
 	 * @see \Df\API\Response\Validator::valid()
 	 * @used-by \Df\API\Client::_p()
-	 * @return bool
 	 */
-	function valid() {return 0 === $this->r()['code'];}
+	function valid():bool {return 0 === $this->r()['code'];}
 }

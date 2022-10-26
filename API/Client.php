@@ -28,7 +28,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @param string $path
 	 * @return array(string => mixed)
 	 */
-	final protected function commonParams($path) {return self::ORG === $path ? [] : [
+	final protected function commonParams($path):array {return self::ORG === $path ? [] : [
 		'organization_id' => $this->ss()->organization()
 	];}
 
@@ -40,7 +40,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @used-by \Df\API\Client::_p()
 	 * @return array(string => string)
 	 */
-	final protected function headers() {return ['Authorization' => "Zoho-authtoken {$this->ss()->token()}"];}
+	final protected function headers():array {return ['Authorization' => "Zoho-authtoken {$this->ss()->token()}"];}
 
 	/**
 	 * 2017-07-05
@@ -48,9 +48,8 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @see \Df\API\Client::urlBase()
 	 * @used-by \Df\API\Client::__construct()
 	 * @used-by \Df\API\Client::url()
-	 * @return string
 	 */
-	final protected function urlBase() {return sprintf(
+	final protected function urlBase():string {return sprintf(
 		"https://%s.zoho.com/api/v{$this->version()}", df_zoho_app($this)->titleLc()
 	);}
 
@@ -59,9 +58,8 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @override
 	 * @see \Df\API\Client::responseValidatorC()
 	 * @used-by \Df\API\Client::_p()
-	 * @return string
 	 */
-	final protected function responseValidatorC() {return \Df\ZohoBI\API\Validator::class;}
+	final protected function responseValidatorC():string {return \Df\ZohoBI\API\Validator::class;}
 
 	/**
 	 * 2017-07-08
