@@ -63,7 +63,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 
 	/**
 	 * 2017-07-08
-	 * @used-by commonParams()
+	 * @used-by self::commonParams()
 	 * @used-by \Df\ZohoBI\API\Facade::organizations()
 	 * @var string
 	 */
