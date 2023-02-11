@@ -37,14 +37,13 @@ abstract class Facade {
 
 	/**
 	 * 2017-07-06
-	 * @param string $path
 	 * @param string $ns [optional]
 	 * @param array(string => mixed) $p [optional]
 	 * @param string|null $method [optional]
 	 * @return array(string => mixed)
 	 * @throws DFE
 	 */
-	final function p($path, $ns = '', array $p = [], $method = null) {return C::i(
+	final function p(string $path, $ns = '', array $p = [], $method = null) {return C::i(
 		$this, df_cc_path($ns, $path), $p, $method
 	)->p()[$path];}
 
