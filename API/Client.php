@@ -25,10 +25,9 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @override
 	 * @see \Df\API\Client::commonParams()
 	 * @used-by \Df\API\Client::__construct()
-	 * @param string $path
 	 * @return array(string => mixed)
 	 */
-	final protected function commonParams($path):array {return self::ORG === $path ? [] : [
+	final protected function commonParams(string $path):array {return self::ORG === $path ? [] : [
 		'organization_id' => $this->ss()->organization()
 	];}
 
@@ -59,7 +58,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @see \Df\API\Client::responseValidatorC()
 	 * @used-by \Df\API\Client::_p()
 	 */
-	final protected function responseValidatorC():string {return \Df\ZohoBI\API\Validator::class;}
+	final protected function responseValidatorC():string {return Validator::class;}
 
 	/**
 	 * 2017-07-08
