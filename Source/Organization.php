@@ -1,6 +1,7 @@
 <?php
 namespace Df\ZohoBI\Source;
 use Df\ZohoBI\App;
+use Df\ZohoBI\Settings;
 /**
  * 2017-07-06
  * 2017-07-07
@@ -72,7 +73,6 @@ final class Organization extends \Df\Config\Source\API {
 
 	/**
 	 * 2017-07-06
-	 * @return \Df\ZohoBI\Settings
 	 */
-	private function ss() {return $this->app()->ss();}
+	private function ss():Settings {return $this->app()->ss();}
 }
