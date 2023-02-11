@@ -73,6 +73,7 @@ final class Organization extends \Df\Config\Source\API {
 
 	/**
 	 * 2017-07-06
+	 * @used-by self::isRequirementMet()
 	 */
 	private function ss():Settings {return $this->app()->ss();}
 }
