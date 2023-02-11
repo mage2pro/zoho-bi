@@ -53,12 +53,6 @@ abstract class Facade {
 
 	/**
 	 * 2017-07-07
-	 * @return Settings
-	 */
-	private function ss() {return $this->app()->ss();}
-
-	/**
-	 * 2017-07-07
 	 * @used-by \Df\ZohoBI\App::f()
 	 * @param string|object $c
 	 * @return self
