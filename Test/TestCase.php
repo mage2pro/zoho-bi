@@ -15,7 +15,6 @@ abstract class TestCase extends \Df\Zoho\Test\TestCase {
 
 	/**
 	 * 2017-07-07
-	 * @return Facade
 	 */
-	final protected function f() {return $this->app()->f();}
+	final protected function f():Facade {return $this->app()->f();}
 }
