@@ -41,7 +41,7 @@ final class Organization extends \Df\Config\Source\API {
 	 * @used-by \Df\Config\Source\API::map()
 	 * @return array(string => string)
 	 */
-	protected function fetch():array {return df_map_r(function($v) {return [
+	protected function fetch():array {return df_map_r(function(array $v) {return [
 		$v['organization_id'], df_desc($v['name'], $v['organization_id'])
 	];}, $this->app()->f()->organizations());}
 
