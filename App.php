@@ -10,7 +10,6 @@ use Df\ZohoBI\API\Facade as F;
 abstract class App extends \Df\Zoho\App {
 	/**
 	 * 2017-7-07
-	 * @return F
 	 */
-	final function f() {return F::s($this);}
+	final function f():F {return F::s($this);}
 }
