@@ -12,6 +12,7 @@ abstract class TestCase extends \Df\Zoho\Test\TestCase {
 	 * 2017-07-07
 	 * @used-by \Dfe\ZohoBooks\Test\Basic::t02_organizations()
 	 * @used-by \Dfe\ZohoBooks\Test\Basic::t03_invalid()
+	 * @used-by \Dfe\ZohoBooks\Test\Basic::t04_currencies()
 	 */
 	final protected function f():Facade {return $this->app()->f();}
 
