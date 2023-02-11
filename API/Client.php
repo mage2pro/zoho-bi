@@ -16,9 +16,8 @@ abstract class Client extends \Df\Zoho\API\Client {
 	 * @used-by \Df\ZohoBI\API\Client::urlBase()
 	 * @see \Dfe\ZohoBooks\API\Client::version()
 	 * @see \Dfe\ZohoInventory\API\Client::version()
-	 * @return int
 	 */
-	abstract protected function version();
+	abstract protected function version():int;
 
 	/**
 	 * 2017-07-08
