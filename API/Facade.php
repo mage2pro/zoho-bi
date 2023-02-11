@@ -47,12 +47,6 @@ abstract class Facade {
 
 	/**
 	 * 2017-07-07
-	 * @return App
-	 */
-	private function app() {return App::s($this);}
-
-	/**
-	 * 2017-07-07
 	 * @used-by \Df\ZohoBI\App::f()
 	 * @param string|object $c
 	 * @return self
