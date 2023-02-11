@@ -9,7 +9,8 @@ use Df\ZohoBI\API\Facade as F;
  */
 abstract class App extends \Df\Zoho\App {
 	/**
-	 * 2017-7-07
+	 * 2017-07-07
+	 * @used-by \Df\ZohoBI\Source\Organization::fetch()
 	 */
 	final function f():F {return F::s($this);}
 }
