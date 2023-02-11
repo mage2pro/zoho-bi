@@ -33,7 +33,7 @@ abstract class Facade {
 	 * https://www.zoho.eu/inventory/api/v1/#organization-id
 	 * @return array(array(string => mixed))
 	 */
-	final function organizations() {return $this->p(Client::ORG);}
+	final function organizations():array {return $this->p(Client::ORG);}
 
 	/**
 	 * 2017-07-06
