@@ -17,7 +17,7 @@ abstract class Facade {
 	 * https://www.zoho.eu/inventory/api/v1/#Currency_List_Currency
 	 * @return array(array(string => mixed))
 	 */
-	final function currencies() {return $this->p(__FUNCTION__, 'settings');}
+	final function currencies():array {return $this->p(__FUNCTION__, 'settings');}
 
 	/**
 	 * 2017-07-06
