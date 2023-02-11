@@ -63,9 +63,8 @@ final class Organization extends \Df\Config\Source\API {
 
 	/**
 	 * 2017-07-06
-	 * @return App
 	 */
-	private function app():App {return dfc($this, function() {return df_zoho_app(
+	private function app():App {return dfc($this, function():App {return df_zoho_app(
 		'Dfe_Zoho' . ucfirst($this->pathA()[1])
 	);});}
 
