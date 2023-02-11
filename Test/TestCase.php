@@ -10,12 +10,12 @@ use Df\ZohoBI\API\Facade;
 abstract class TestCase extends \Df\Zoho\Test\TestCase {
 	/**
 	 * 2017-07-07
-	 * @used-by self::f()
 	 */
-	final protected function app():App {return App::s($this);}
+	final protected function f():Facade {return $this->app()->f();}
 
 	/**
 	 * 2017-07-07
+	 * @used-by self::f()
 	 */
-	final protected function f():Facade {return $this->app()->f();}
+	private function app():App {return App::s($this);}
 }
