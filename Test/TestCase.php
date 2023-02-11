@@ -15,6 +15,7 @@ abstract class TestCase extends \Df\Zoho\Test\TestCase {
 	 * @used-by \Dfe\ZohoBooks\Test\Basic::t04_currencies()
 	 * @used-by \Dfe\ZohoInventory\Test\Basic::t02_organizations()
 	 * @used-by \Dfe\ZohoInventory\Test\Basic::t03_invalid()
+	 * @used-by \Dfe\ZohoInventory\Test\Basic::t04_currencies()
 	 */
 	final protected function f():Facade {return $this->app()->f();}
 
