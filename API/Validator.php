@@ -1,5 +1,5 @@
 <?php
-namespace Df\ZohoBI\API;
+namespace Dfe\ZohoBI\API;
 /**
  * 2017-07-06
  * An error response looks like:
@@ -15,7 +15,7 @@ namespace Df\ZohoBI\API;
  *	}
  * https://www.zoho.eu/books/api/v3/#response
  * https://www.zoho.eu/inventory/api/v1/#response
- * @used-by \Df\ZohoBI\API\Client::responseValidatorC()
+ * @used-by \Dfe\ZohoBI\API\Client::responseValidatorC()
  */
 final class Validator extends \Df\API\Response\Validator {
 	/**

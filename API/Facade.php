@@ -1,9 +1,9 @@
 <?php
-namespace Df\ZohoBI\API;
+namespace Dfe\ZohoBI\API;
 use Df\Core\Exception as DFE;
-use Df\ZohoBI\API\Client as C;
-use Df\ZohoBI\App;
-use \Df\ZohoBI\Settings;
+use Dfe\ZohoBI\API\Client as C;
+use Dfe\ZohoBI\App;
+use \Dfe\ZohoBI\Settings;
 /**
  * 2017-07-06
  * @see \Dfe\ZohoBooks\API\Facade
@@ -47,7 +47,7 @@ abstract class Facade {
 
 	/**
 	 * 2017-07-07
-	 * @used-by \Df\ZohoBI\App::f()
+	 * @used-by \Dfe\ZohoBI\App::f()
 	 * @param string|object $c
 	 * @return self
 	 */

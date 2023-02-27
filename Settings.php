@@ -1,11 +1,11 @@
 <?php
-namespace Df\ZohoBI;
+namespace Dfe\ZohoBI;
 /**
  * 2017-07-06
  * @see \Dfe\ZohoCRM\Settings
  * @see \Dfe\ZohoInventory\Settings
  */
-abstract class Settings extends \Df\Zoho\Settings {
+abstract class Settings extends \Dfe\Zoho\Settings {
 	/**
 	 * 2017-07-07
 	 * Note 1:
@@ -19,7 +19,7 @@ abstract class Settings extends \Df\Zoho\Settings {
 	 * https://www.zoho.eu/books/api/v3/#organization-id
 	 * https://www.zoho.eu/inventory/api/v1/#organization-id
 	 * Note 2: The result is a natural number like «2723074» or «649147519».
-	 * @used-by \Df\ZohoBI\API\Client::commonParams()
+	 * @used-by \Dfe\ZohoBI\API\Client::commonParams()
 	 * @return int
 	 */
 	final function organization() {return $this->i();}

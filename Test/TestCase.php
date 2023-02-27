@@ -1,13 +1,13 @@
 <?php
-namespace Df\ZohoBI\Test;
-use Df\ZohoBI\App;
-use Df\ZohoBI\API\Facade;
+namespace Dfe\ZohoBI\Test;
+use Dfe\ZohoBI\App;
+use Dfe\ZohoBI\API\Facade;
 /**
  * 2017-07-07
  * @see \Dfe\ZohoBooks\Test\TestCase
  * @see \Dfe\ZohoInventory\Test\TestCase
  */
-abstract class TestCase extends \Df\Zoho\Test\TestCase {
+abstract class TestCase extends \Dfe\Zoho\Test\TestCase {
 	/**
 	 * 2017-07-07
 	 * @used-by \Dfe\ZohoBooks\Test\Basic::t02_organizations()

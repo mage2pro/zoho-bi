@@ -1,7 +1,7 @@
 <?php
-namespace Df\ZohoBI\Source;
-use Df\ZohoBI\App;
-use Df\ZohoBI\Settings;
+namespace Dfe\ZohoBI\Source;
+use Dfe\ZohoBI\App;
+use Dfe\ZohoBI\Settings;
 /**
  * 2017-07-06
  * 2017-07-07

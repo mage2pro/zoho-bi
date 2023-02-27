@@ -1,7 +1,7 @@
 <?php
-namespace Df\ZohoBI\API;
+namespace Dfe\ZohoBI\API;
 use Df\Core\Exception as DFE;
-use Df\ZohoBI\Settings;
+use Dfe\ZohoBI\Settings;
 /**
  * 2017-07-06
  * A common functionality for Zoho Books and Zoho Inventory.
@@ -10,10 +10,10 @@ use Df\ZohoBI\Settings;
  * @see \Dfe\ZohoInventory\API\Client
  * @method Settings ss()
  */
-abstract class Client extends \Df\Zoho\API\Client {
+abstract class Client extends \Dfe\Zoho\API\Client {
 	/**
 	 * 2017-07-06
-	 * @used-by \Df\ZohoBI\API\Client::urlBase()
+	 * @used-by \Dfe\ZohoBI\API\Client::urlBase()
 	 * @see \Dfe\ZohoBooks\API\Client::version()
 	 * @see \Dfe\ZohoInventory\API\Client::version()
 	 */
@@ -62,7 +62,7 @@ abstract class Client extends \Df\Zoho\API\Client {
 	/**
 	 * 2017-07-08
 	 * @used-by self::commonParams()
-	 * @used-by \Df\ZohoBI\API\Facade::organizations()
+	 * @used-by \Dfe\ZohoBI\API\Facade::organizations()
 	 * @var string
 	 */
 	const ORG = 'organizations';
